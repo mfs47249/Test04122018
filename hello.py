@@ -56,9 +56,9 @@ class window (JPanel):
         self.frame.visible = True
 
 
-print ("Test")
+print ("test")
 w = window("Hello World")
-print ("Fertig")
+print ("done")
 
 if __name__ == '__main__':
     pass
