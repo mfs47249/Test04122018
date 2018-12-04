@@ -14,14 +14,18 @@ from javax.swing import BorderFactory
 
 
 class window (JPanel):
+    outtext = ""
+
     def actionPerformed(self, e):
-        cmdstring = e.getActionCommand()
-        print cmdstring
-        if ("add" == cmdstring):
-            self.text.setText(cmdstring)
-        if ("delete" == cmdstring):
-            self.text.setText(cmdstring)
-        if ("quit" == cmdstring):
+        self.cmdstring = e.getActionCommand()
+        print self.cmdstring
+        if ("add" == self.cmdstring):
+            self.outtext += "add "
+            self.text.setText(self.outtext)
+        if ("delete" == self.cmdstring):
+            self.outtext += "delete "
+            self.text.setText(self.outtext)
+        if ("quit" == self.cmdstring):
             self.frame.dispose()
 
     def __init__(self, title):
