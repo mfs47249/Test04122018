@@ -26,6 +26,7 @@ class window (JPanel):
             self.outtext += "delete "
             self.text.setText(self.outtext)
         if ("quit" == self.cmdstring):
+            print ("Quit button pressed.")
             self.frame.dispose()
 
     def __init__(self, title):
