@@ -18,7 +18,7 @@ class window (JPanel):
 
     def actionPerformed(self, e):
         self.cmdstring = e.getActionCommand()
-        print self.cmdstring
+        print (self.cmdstring)
         if ("add" == self.cmdstring):
             self.outtext += "add "
             self.text.setText(self.outtext)
